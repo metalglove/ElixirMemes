@@ -1,6 +1,12 @@
 # Memes
 
-**TODO: Add description**
+
+```elixir
+#first get the dependencies and compile
+mix deps.get, compile
+#then run it!
+iex -S mix
+```
 
 ## Installation
 
