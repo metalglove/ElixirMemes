@@ -13,9 +13,24 @@ Memes.start([],[])
 
 #open a webbrowser and go to http://localhost:8880/getRandomMeme
 #success result
-{"data":{"id":"abYXZbr","imgUrl":"https://images-cdn.9gag.com/photo/abYXZbr_700b.jpg","pageUrl":"http://9gag.com/gag/abYXZbr","title":"God is listening"},"status":"success"}
+{
+  "data":
+  {
+    "id":"abYXZbr",
+    "imgUrl":"https://images-cdn.9gag.com/photo/abYXZbr_700b.jpg",
+    "pageUrl":"http://9gag.com/gag/abYXZbr",
+    "title":"God is listening"
+  },
+  "status":"success"
+}
 #failed result
-{"data":{"error (reason)"},"status":"failed"}
+{
+  "data":
+  {
+    "error (reason)"
+  },
+  "status":"failed"
+}
 ```
 
 ## Installation
