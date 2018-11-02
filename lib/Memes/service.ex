@@ -4,6 +4,26 @@ defmodule Memes.Service do
   """
 
   @doc """
+  Fetches memes recursively by the count
+
+  returns list of memes
+  """
+  def fetchRandomMemes(count, list) do
+    if length(list) <= count do
+      IO.puts("#{inspect length(list)}")
+      result = fetchRandomMeme()
+      #IO.puts("#{inspect result}")
+      list = 
+        if result.status == :success do
+          list ++ [result.data]
+        end
+      fetchRandomMemes(count, list)
+    else
+      list
+    end
+  end
+
+  @doc """
   Fetches a random meme
 
   returns meme

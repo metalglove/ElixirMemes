@@ -35,8 +35,9 @@ defmodule Memes.API do
   end
 
   namespace :getRandomMeme do
-		get do
-			json(conn, Memes.Service.fetchRandomMeme())
+    get do
+      pid = Process.whereis(:meme_genserver)
+			json(conn, Memes.GServer.fetch_meme(pid))
 		end
   end
 
