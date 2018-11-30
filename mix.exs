@@ -14,8 +14,8 @@ defmodule Memes.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      #extra_applications: [:logger],
-      applications: [:logger, :httpotion, :floki, :maru, :jason, :distillery],
+      # extra_applications: [:logger],
+      applications: [:logger, :httpotion, :floki, :maru, :jason, :distillery]
     ]
   end
 
@@ -23,12 +23,12 @@ defmodule Memes.MixProject do
   defp deps do
     [
       {:httpotion, "~> 3.1.0"},
-      {:floki, "~> 0.20.0"}, 
+      {:floki, "~> 0.20.0"},
       {:maru, "~> 0.13"},
       {:cowboy, "~> 2.3"},
       {:jason, "~> 1.1"},
       {:distillery, "~> 2.0"},
-      {:plug_cowboy, "~> 2.0"},
+      {:plug_cowboy, "~> 2.0"}
     ]
   end
 end
