@@ -9,7 +9,10 @@ mix deps.get, compile
 iex -S mix
 
 #start the server 
-Memes.start([],[])
+Memes.start()
+
+#the server will first fetch 10 memes to the cache (stack).
+will count from 1 to 10...
 
 #open a webbrowser and go to http://localhost:8880/getRandomMeme
 #success result
