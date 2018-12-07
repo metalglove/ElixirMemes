@@ -24,6 +24,10 @@ defmodule Memes.Stack do
     GenServer.call(pid, :pop)
   end
 
+  def count(pid) do
+    GenServer.call(pid, :count)
+  end
+
   def info(pid) do
     GenServer.call(pid, {:info})
   end
@@ -35,7 +39,11 @@ defmodule Memes.Stack do
   end
 
   def handle_call(:pop, _from, [head | tail]) do
-    {:reply, %{meme: head |> hd, count: Enum.count(tail)}, tail}
+    {:reply, %{meme: head, count: Enum.count(tail)}, tail}
+  end
+
+  def handle_call(:count, _from, stack) do
+    {:reply, Enum.count(stack), stack}
   end
 
   def handle_cast({:push, meme}, state) do
